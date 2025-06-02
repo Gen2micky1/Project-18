@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --BACKGROUND: #684BB1;
+  --NEUTRAL: #FFFFFF;
+
+  /* SHADOW */
+  --BUTTON: 0rem .25rem .25rem rgba(0, 0, 0, 0.25); 
+
+  /* TYPOGRAPHY */
+  --FF1: "Poppins", sans-serif;
+  --FF2: "Open Sans", sans-serif;
+
+  /* MOBILE */
+  --TITLE-MOB: bold 1.5rem/2.25rem var(--FF1);
+  --SUBTITLE-MOB: normal 1rem/1.5rem var(--FF2);
+  --BUTTON-MOB: normal .75rem/1.125rem var(--FF1);
+
+  /* DESKTOP */
+  --TITLE-DSK: bold 2.5rem/3.75rem var(--FF1);
+  --SUBTITLE-DSK: normal 1.125rem/1.6875rem var(--FF2);
+  --BUTTON-DSK: normal 1.125rem/1.6875rem var(--FF1);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  background-color: var(--BACKGROUND);
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 375px 373px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+/* HEADER */
+.huddle__header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 2.3875rem auto 0rem auto;
+}
+
+.header-content {
+    width: 296px;
+    height: 297.8px;
+    display: flex;
+    flex-flow: column;
+    gap: 4.375rem;
+}
+
+.header__logo {
+    width: 120px;
+    height: 19px;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__hero {
+    width: 296px;
+    height: 209px;
+}
+
+.header__hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.huddle-main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 3.75rem auto 4rem auto;
+}
+
+.main-content {
+    width: 304px;
+    height: 272px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main__text-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text-content-title {
+    font: var(--TITLE-MOB);
+    color: var(--NEUTRAL);
+}
+
+.text-content-subtext {
+    font: var(--SUBTITLE-MOB);
+    color: var(--NEUTRAL);
+}
+
+.content-button {
+    background-color: var(--NEUTRAL);
+    padding: .7056rem 4.6963rem .6694rem 4.7412rem;
+    border-radius: 1.25rem;
+
+    font: var(--BUTTON-MOB);
+    color: var(--BACKGROUND);
+}
+
+.huddle-footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 4rem auto 2.5rem auto;
+}
+
+.footer__social-logos {
+    width: 103.5px;
+    height: 28px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__social-logo {
+    width: 27.5px;
+    height: 28px;
+}
+
+.footer__social-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
