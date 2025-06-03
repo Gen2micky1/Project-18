@@ -18,6 +18,7 @@ img {
   /* COLORS */
   --BACKGROUND: #684BB1;
   --NEUTRAL: #FFFFFF;
+  --HOVER: #E880E8;
 
   /* SHADOW */
   --BUTTON: 0rem .25rem .25rem rgba(0, 0, 0, 0.25); 
@@ -49,6 +50,10 @@ img {
 
 .center {
   text-align: center;
+}
+
+.responsive-image {
+  display: none;
 }
 
 /* MOBILE FIRST DESIGN */
@@ -184,19 +189,19 @@ a:any-link {
     margin: 4rem auto 2.5rem auto;
 }
 
-.footer__social-logos {
+.footer__social-links {
     width: 103.5px;
     height: 28px;
     display: flex;
     justify-content: space-around;
 }
 
-.footer__social-logo {
+.footer__social-link {
     width: 27.5px;
     height: 28px;
 }
 
-.footer__social-logo img {
+.footer__social-link img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -269,14 +274,35 @@ a:any-link {
         margin: 1.6875rem auto 2.5rem auto;
     }
 
-    .footer__social-logos {
+    .footer__social-links {
         width: 152px;
         height: 40px;
         margin-right: 5rem;
     }
 
-    .footer__social-logo {
+    .footer__social-link {
         width: 40px;
         height: 40px;
     }
+
+    /* HOVER AND ACTIVE STATE */
+    .content-button:hover {
+        background-color: var(--HOVER);
+        color: var(--NEUTRAL);
+    }
+
+    /* FOOTER */
+
+
+    .footer__social-link:hover .social-link-org,
+    .footer__social-link:focus-visible .social-link-org{
+        display: none;
+    }
+
+    .footer__social-link:hover .social-link-hover,
+    .footer__social-link:focus-visible .social-link-hover {
+        display: block;
+        
+    }
+
 }
